@@ -1,0 +1,20 @@
+{
+  "name": "weighted-arrays",
+  "version": "1.0.0",
+  "description": "tools for weighted arrays",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophietk/weighted-arrays.git"
+  },
+  "keywords": [
+    "weighting",
+    "weighted",
+    "random"
+  ],
+  "author": "sophietk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sophietk/weighted-arrays/issues"
+  },
+  "homepage": "https://github.com/sophietk/weighted-arrays#readme"
+}
