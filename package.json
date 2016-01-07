@@ -2,6 +2,10 @@
   "name": "weighted-arrays",
   "version": "1.0.0",
   "description": "tools for weighted arrays",
+  "main": "lib/weighted-arrays.js",
+  "scripts": {
+    "test": "mocha --require should"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sophietk/weighted-arrays.git"
@@ -16,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/sophietk/weighted-arrays/issues"
   },
-  "homepage": "https://github.com/sophietk/weighted-arrays#readme"
+  "homepage": "https://github.com/sophietk/weighted-arrays#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^8.0.2"
+  }
 }
