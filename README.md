@@ -11,8 +11,13 @@ npm i weighted-arrays
 ```js
 var wa = require('weighted-arrays');
 
-var array = [1, 2, 3, 4]; 
-var random = wa.random(array, function (obj) {
-  return obj;
-});
+var array = [
+  { value: 'a', weight: 0},
+  { value: 'b', weight: 5},
+  { value: 'c', weight: 10}
+];
+var getWeight = function (obj) {
+  return obj.weight;
+};
+var random = wa.random(array, getWeight);
 ```
