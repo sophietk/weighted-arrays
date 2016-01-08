@@ -6,6 +6,11 @@ var identity = function (value) {
 var sameWeight = function () {
   return 1;
 };
+var isValue = function (expected) {
+  return function (value) {
+    return value === expected;
+  };
+};
 
 describe('random', function () {
 
@@ -36,6 +41,22 @@ describe('random', function () {
 
     random.should.not.equal(0);
     [0.33, 0.44].should.containEql(random);
+  });
+
+  it('should return random value coherent with weight', function () {
+    var array = [0, 1, 3, 7];
+    var draws = 10000;
+    var delta = draws * 0.1;
+    var randoms = [];
+    for (var i = 0; i < draws; i++) {
+      randoms.push(wa.random(array, identity));
+    }
+
+    randoms.should.have.length(draws);
+    randoms.filter(isValue(0)).length.should.equal(0);
+    randoms.filter(isValue(1)).length.should.be.approximately(1000, delta);
+    randoms.filter(isValue(3)).length.should.be.approximately(3000, delta);
+    randoms.filter(isValue(7)).length.should.be.approximately(7000, delta);
   });
 
 });
