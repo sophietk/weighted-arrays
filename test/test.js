@@ -23,6 +23,21 @@ describe('random', function () {
     random.should.not.equal(0);
   });
 
+  it('should return one of values with weight', function () {
+    var array = [0, 1, 2];
+    var random = wa.random(array, identity);
+
+    [1, 2].should.containEql(random);
+  });
+
+  it('should works with non-integer weights', function () {
+    var array = [0, 0.33, 0.44];
+    var random = wa.random(array, identity);
+
+    random.should.not.equal(0);
+    [0.33, 0.44].should.containEql(random);
+  });
+
 });
 
 describe('probability', function () {
