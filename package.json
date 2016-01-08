@@ -6,6 +6,10 @@
   "scripts": {
     "test": "mocha --require should"
   },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "engineStrict" : true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sophietk/weighted-arrays.git"
