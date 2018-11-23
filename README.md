@@ -1,12 +1,12 @@
-# Weighted arrays
+# weighted-arrays
 
-## Install it
+## install it
 
 ```bash
 npm i weighted-arrays
 ```
 
-## Use it
+## use it
 
 ```js
 var wa = require('weighted-arrays');
