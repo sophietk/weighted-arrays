@@ -28,7 +28,7 @@ describe('random', () => {
     [1, 2].should.containEql(random)
   })
 
-  it('should works with non-integer weights', () => {
+  it('should work with non-integer weights', () => {
     const array = [0, 0.33, 0.44]
     const random = wa.random(array, identity)
 
