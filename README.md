@@ -9,15 +9,18 @@ npm i weighted-arrays
 ## use it
 
 ```js
-var wa = require('weighted-arrays');
+const wa = require('weighted-arrays')
 
-var array = [
+const array = [
   { value: 'a', weight: 0},
-  { value: 'b', weight: 5},
+  { value: 'b', weight: 2.5},
   { value: 'c', weight: 10}
-];
-var getWeight = function (obj) {
-  return obj.weight;
-};
-var random = wa.random(array, getWeight);
+]
+const getWeight = obj => obj.weight
+
+const random = wa.random(array, getWeight)
+// output: sometimes { value: 'b', weight: 2.5}, sometimes { value: 'c', weight: 10}, and never { value: 'a', weight: 0}
+
+const probability = wa.probability(array, getWeight, array[1])
+// output: 0.2
 ```

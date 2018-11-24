@@ -1,6 +1,6 @@
 {
   "name": "weighted-arrays",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "tools for weighted arrays",
   "main": "lib/weighted-arrays.js",
   "scripts": {
@@ -17,7 +17,8 @@
   "keywords": [
     "weighting",
     "weighted",
-    "random"
+    "random",
+    "probability"
   ],
   "author": "sophietk",
   "license": "MIT",
